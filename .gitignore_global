@@ -1,0 +1,28 @@
+#OSX
+*~
+.DS_Store
+
+#Editors, IDEs
+*.swp
+*.iml
+.idea
+*.sublime-project
+*.sublime-workspace
+
+#Build, depman etc
+target
+rebel.xml
+node_modules
+
+build-and-deploy.sh
+*build-and-deploy.sh
+touchrec.sh
+todo.txt
+
+*.emiloberg.sh
+
+npm-debug.log
+
+dump.rdb
+
+public/assets
