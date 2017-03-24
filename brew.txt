@@ -1,0 +1,10 @@
+heroku
+hub
+libxslt
+postgresql
+rbenv
+redis
+rmtrash
+the_silver_searcher
+yarn
+zsh-syntax-highlighting
