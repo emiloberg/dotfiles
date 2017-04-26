@@ -22,3 +22,7 @@
 	pl = pull --rebase
 	co = checkout
 	s = status
+[url "https://"]
+	insteadOf = git://
+[push]
+  default = current
