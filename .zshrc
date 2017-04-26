@@ -88,6 +88,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias psnode="ps aux | awk '!/Slack/ && !/WebStorm/ && !/Postman/ && !/Visual Studio Code/ && !/ionodecache/ && (/node/)'"
 
 #LOAD NVM
 export NVM_DIR="$HOME/.nvm"
