@@ -1,6 +1,7 @@
 heroku
 hub
 libxslt
+nginx
 postgresql
 rbenv
 redis
