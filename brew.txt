@@ -2,10 +2,17 @@ heroku
 hub
 libxslt
 nginx
+nmap
 postgresql
 rbenv
 redis
 rmtrash
+siege
+sloccount
 the_silver_searcher
+tldr
+tmux
+tree
+watchman
 yarn
 zsh-syntax-highlighting

@@ -25,4 +25,4 @@
 [url "https://"]
 	insteadOf = git://
 [push]
-  default = current
+	default = current
