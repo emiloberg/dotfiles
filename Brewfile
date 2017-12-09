@@ -51,7 +51,6 @@ cask "visual-studio-code"
 cask "webstorm"
 cask "zoomus"
 cask "caskroom/drivers/logitech-options"
-mas "1Password", id: 443987910
 mas "Affinity Photo", id: 824183456
 mas "Airmail 3", id: 918858936
 mas "Evernote", id: 406056744

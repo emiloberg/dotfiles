@@ -36,8 +36,9 @@ Commit and push!
 4. `mkdir ~/code/github && cd ~/code/github && git clone https://github.com/emiloberg/dotfiles.git`
 5. Follow "Installation" above	
 6. Start Dropbox to start synk (this will take a while)
-7. ?
-8. Profit!
+7. Install 1password from AppStore (not in Brewfile because of security)
+8. ?
+9. Profit!
 
 #### Settings to be made
 1. iTerm Preferences > Check “Load preferences from a custom folder or URL > Select the iTerm2 folder included in this repo
