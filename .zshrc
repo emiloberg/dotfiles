@@ -102,7 +102,8 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(hub alias -s)"
 
 # ALIAS
-alias del=rmtrash
+alias rm=rmtrash
+alias del=rm
 alias pr="open $(git remote get-url origin)/compare/$(git branch | grep \* | cut -d ' ' -f2)?expand=1"
 
 #RBEnv
