@@ -9,5 +9,6 @@ ln -sfv "$CURRENT_DIR/.gitconfig" ~
 ln -sfv "$CURRENT_DIR/.gitignore_global" ~
 ln -sfv "$CURRENT_DIR/.phoenix.js" ~
 ln -sfv "$CURRENT_DIR/.zshrc" ~
+mkdir -p ~/.config/karabiner && ln -sfv "$CURRENT_DIR/karabiner.json" ~/.config/karabiner
 
 echo "I am done!"
