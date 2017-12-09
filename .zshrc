@@ -89,6 +89,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias psnode="ps aux | awk '!/Slack/ && !/WebStorm/ && !/Postman/ && !/Visual Studio Code/ && !/ionodecache/ && (/node/)'"
+alias bi="brew install"
+alias bci="brew cask install"
+alias bs="brew search"
+alias bcs="brew cask search"
 
 #LOAD NVM
 export NVM_DIR="$HOME/.nvm"
@@ -103,3 +107,6 @@ alias pr="open $(git remote get-url origin)/compare/$(git branch | grep \* | cut
 
 #RBEnv
 eval "$(rbenv init -)"
+
+# Syntax Highlighting 
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
