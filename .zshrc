@@ -105,6 +105,7 @@ eval "$(hub alias -s)"
 alias rm=rmtrash
 alias del=rm
 alias pr="open $(git remote get-url origin)/compare/$(git branch | grep \* | cut -d ' ' -f2)?expand=1"
+alias mergepdf="\"/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py\" -o merged.pdf ./*.pdf"
 
 #RBEnv
 eval "$(rbenv init -)"
