@@ -45,5 +45,6 @@ Commit and push!
 2. Webstorm > Settings Repository > `https://github.com/emiloberg/webstorm-settings`.
 
 #### To install manually
+* [nvm](https://github.com/creationix/nvm) (Explicitly not supported by Brew).
 * Logitech Options (for mouse)
 * FiraCoda font [https://github.com/tonsky/FiraCode/releases](https://github.com/tonsky/FiraCode/releases) (old release on Brew)

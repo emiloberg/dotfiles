@@ -22,6 +22,7 @@ todo.txt
 *.emiloberg.sh
 
 npm-debug.log
+.eslintcache
 
 dump.rdb
 
