@@ -1,3 +1,5 @@
+const MENU_BAR_HEIGHT = 22
+
 const ML = {
   switchMonitors: function () {
     Window.focused().setFrame(Window.focused().screen().previous().flippedVisibleFrame())
@@ -11,7 +13,7 @@ const ML = {
 
   left: function () {
     const window = Window.focused()
-    const screen = window.screen().flippedFrame()
+    const screen = window.screen().flippedVisibleFrame()
 
     window.setFrame({
       x: screen.x,
@@ -23,7 +25,7 @@ const ML = {
 
   right: function () {
     const window = Window.focused()
-    const screen = window.screen().flippedFrame()
+    const screen = window.screen().flippedVisibleFrame()
 
     window.setFrame({
       x: screen.width / 2,
@@ -35,7 +37,7 @@ const ML = {
 
   rightTopHalf: function () {
     const window = Window.focused()
-    const screen = window.screen().flippedFrame()
+    const screen = window.screen().flippedVisibleFrame()
 
     window.setFrame({
       x: screen.width / 2,
@@ -47,11 +49,11 @@ const ML = {
 
   rightBottomHalf: function () {
     const window = Window.focused()
-    const screen = window.screen().flippedFrame()
+    const screen = window.screen().flippedVisibleFrame()
 
     window.setFrame({
       x: screen.width / 2,
-      y: screen.height / 2,
+      y: (screen.height / 2) + MENU_BAR_HEIGHT,
       width: screen.width / 2,
       height: screen.height / 2
     })
