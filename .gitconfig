@@ -21,6 +21,7 @@
 	p = pull --rebase
 	pl = pull --rebase
 	co = checkout
+	go = checkout
 	s = status
 [url "https://"]
 	insteadOf = git://
