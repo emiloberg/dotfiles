@@ -88,7 +88,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias gitclean="git co master && git pl && git branch --merged | egrep -v \"(^\*|master)\" | xargs git branch -d && git fetch --prune"
+alias gitclean="git co master && git fetch -p && git pl && git branch --merged | egrep -v \"(^\*|master)\" | xargs git branch -d && git fetch --prune"
 alias psnode="ps aux | awk '!/Slack/ && !/WebStorm/ && !/Postman/ && !/Visual Studio Code/ && !/ionodecache/ && (/node/)'"
 alias izclone='f() { git clone git@github.com:iZettle/$1.git ~/code/izettle/$1 && cd ~/code/izettle/$1 };f'
 alias bi="brew install"
