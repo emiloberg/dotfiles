@@ -1,9 +1,11 @@
 [user]
 	name = Emil Oberg
 	email = emil@bitupnorth.com
+	signingkey = 707C4158F6B875BB
 [core]
 	excludesfile = /Users/emiloberg/.gitignore_global
 	pager = "diff-so-fancy | less --tabs=4 -RFX"
+	editor = code --wait
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -19,14 +21,20 @@
 [alias]
 	unpushed = !GIT_CURRENT_BRANCH=$(git name-rev --name-only HEAD) && git log origin/$GIT_CURRENT_BRANCH..$GIT_CURRENT_BRANCH --oneline
 	tree = log --graph --oneline --decorate
+	tree-master = log --graph --oneline --decorate --first-parent master
 	p = pull --rebase
 	pl = pull --rebase
 	co = checkout
 	go = checkout
 	s = status
+	unstage = reset --
+	amend = commit --amend --no-edit
 [url "https://"]
 	insteadOf = git://
 [push]
 	default = current
 [commit]
 	template = /Users/emiloberg/.stCommitMsg
+	#gpgsign = true
+[diff "buf"]
+    textconv = hexdump -v -C

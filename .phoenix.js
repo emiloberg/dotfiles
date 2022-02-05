@@ -11,6 +11,42 @@ const ML = {
     }
   },
 
+  one: function () {
+    const window = Window.focused()
+    const screen = window.screen().flippedVisibleFrame()
+
+    window.setFrame({
+      x: screen.x,
+      y: screen.y,
+      width: screen.width / 3,
+      height: screen.height
+    })
+  },
+
+  two: function () {
+    const window = Window.focused()
+    const screen = window.screen().flippedVisibleFrame()
+
+    window.setFrame({
+      x: screen.width / 2,
+      y: screen.y,
+      width: screen.width / 2,
+      height: screen.height
+    })
+  },
+
+  three: function () {
+    const window = Window.focused()
+    const screen = window.screen().flippedVisibleFrame()
+
+    window.setFrame({
+      x: (screen.width / 3) * 2,
+      y: screen.y,
+      width: screen.width / 3,
+      height: screen.height
+    })
+  },
+
   left: function () {
     const window = Window.focused()
     const screen = window.screen().flippedVisibleFrame()
@@ -30,6 +66,8 @@ const ML = {
     window.setFrame({
       x: screen.width / 2,
       y: screen.y,
+      // x: screen.x + (screen.width / 3),
+      // y: screen.y + (screen.height / 2),
       width: screen.width / 2,
       height: screen.height
     })
@@ -66,6 +104,9 @@ const ML = {
 
 Key.on("space", ["shift", "alt"], ML.full)
 Key.on("f", ["shift", "alt"], ML.switchMonitors)
+Key.on("1", ["shift", "alt"], ML.one)
+Key.on("2", ["shift", "alt"], ML.two)
+Key.on("3", ["shift", "alt"], ML.three)
 Key.on("h", ["shift", "alt"], ML.left)
 Key.on("l", ["shift", "alt"], ML.right)
 Key.on("l", ["shift", "ctrl", "alt"], ML.rightTopHalf)

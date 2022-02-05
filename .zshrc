@@ -1,3 +1,6 @@
+export BBLIVE_M2M_SECRET="hemlis"
+export BBLIVE_CLIENT_SECRET="hemlis"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -88,15 +91,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias gitclean="git co master && git fetch -p && git pl && git branch --merged | egrep -v \"(^\*|master)\" | xargs git branch -d && git fetch --prune"
-alias psnode="ps aux | awk '!/Slack/ && !/WebStorm/ && !/Postman/ && !/Visual Studio Code/ && !/ionodecache/ && (/node/)'"
-alias izclone='f() { git clone git@github.com:iZettle/$1.git ~/code/izettle/$1 && cd ~/code/izettle/$1 };f'
+alias gitclean="git co master && git fetch -p && git pl && git branch --merged | egrep -v \"(^\*|master)\" | xargs git branch -d && git fetch --prune && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d"
+alias gitcleandev="git co develop && git fetch -p && git pl && git branch --merged | egrep -v \"(^\*|develop)\" | xargs git branch -d && git fetch --prune && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d"
+alias psnode="ps aux | awk '!/Slack/ && !/WebStorm/ && !/Postman/ && !/Visual Studio Code/ && !/ionodecache/ && !/Adobe/ && (/node/)'"
 alias bi="brew install"
 alias bci="brew cask install"
 alias bs="brew search"
 alias bcs="brew cask search"
-alias deploylog="heroku logs -t --app=iz-site-deploy-bot"
 alias t="touch"
+alias lg="lazygit"
+
 
 #LOAD NVM
 export NVM_DIR="$HOME/.nvm"
@@ -106,9 +110,9 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(hub alias -s)"
 
 # ALIAS
-alias rm=rmtrash
-alias del=rm
-alias pr="open $(git remote get-url origin)/compare/$(git branch | grep \* | cut -d ' ' -f2)?expand=1"
+# alias rm=rmtrash
+# alias del=rm
+# alias pr="open $(git remote get-url origin)/compare/$(git branch | grep \* | cut -d ' ' -f2)?expand=1"
 alias mergepdf="\"/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py\" -o merged.pdf ./*.pdf"
 
 #RBEnv
@@ -119,3 +123,17 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+cd() {      
+   builtin cd "$1"
+    if test -f ".nvmrc"; then
+        NVMRCV=$(cat .nvmrc )
+        NODEV=$(node -v | cut -c 2-)
+        if [ "$NVMRCV" != "$NODEV" ]
+        then
+            nvm use
+        fi
+    fi
+   
+   
+}
+export GPG_TTY=$(tty)
